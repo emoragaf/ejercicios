@@ -1,0 +1,1608 @@
+2013/10/25 16:49:10 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ejercicios.authitem' doesn't exist. The SQL statement executed was: SELECT COUNT(*) FROM AuthItem.
+in C:\wamp\www\ejercicios\protected\modules\rights\components\RInstaller.php (180)
+in C:\wamp\www\ejercicios\protected\modules\rights\controllers\InstallController.php (43)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 16:50:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ejercicios.authassignment' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthAssignment`
+WHERE userid=:userid.
+in C:\wamp\www\ejercicios\protected\modules\rights\components\RAuthorizer.php (341)
+in C:\wamp\www\ejercicios\protected\modules\rights\components\RWebUser.php (21)
+in C:\wamp\www\ejercicios\protected\modules\user\models\UserLogin.php (57)
+2013/10/25 16:50:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ejercicios.authassignment' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthAssignment`
+WHERE userid=:userid' in C:\wamp\www\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\web\auth\CDbAuthManager.php(337): CDbCommand->queryAll()
+#2 C:\wamp\www\ejercicios\protected\modules\rights\components\RAuthorizer.php(341): CDbAuthManager->getAuthAssignments('1')
+#3 C:\wamp\www\ejercicios\protected\modules\rights\components\RWebUser.php(21): RAuthorizer->isSuperuser('1')
+#4 C:\wamp\www\yii\framework\web\auth\CWebUser.php(238): RWebUser->afterLogin(false)
+#5 C:\wamp\www\ejercicios\protected\modules\user\models\UserLogin.php(57): CWebUser->login(Object(UserIdentity), 0)
+#6 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): UserLogin->authenticate('password', Array)
+#7 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#8 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(UserLogin), NULL)
+#9 C:\wamp\www\ejercicios\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): LoginController->actionLogin()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/ejercicios/index.php/user/login
+HTTP_REFERER=http://localhost/ejercicios/index.php/user/login
+---
+2013/10/25 16:50:24 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ejercicios.authitem' doesn't exist. The SQL statement executed was: SELECT COUNT(*) FROM AuthItem.
+in C:\wamp\www\ejercicios\protected\modules\rights\components\RInstaller.php (180)
+in C:\wamp\www\ejercicios\protected\modules\rights\controllers\InstallController.php (43)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "apps".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/apps
+---
+2013/10/25 17:00:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "app".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('app')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/app
+---
+2013/10/25 17:42:42 [warning] [application] Failed to set unsafe attribute "categoriases" of "Apps".
+in C:\wamp\www\ejercicios\protected\controllers\AppsController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:42:42 [warning] [application] Failed to set unsafe attribute "stylesheetsApps" of "Apps".
+in C:\wamp\www\ejercicios\protected\controllers\AppsController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:42:42 [warning] [application] Failed to set unsafe attribute "usersApps" of "Apps".
+in C:\wamp\www\ejercicios\protected\controllers\AppsController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:43:26 [warning] [application] Failed to set unsafe attribute "articuloses" of "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:43:26 [warning] [application] Failed to set unsafe attribute "categoriases" of "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:46:07 [warning] [application] Failed to set unsafe attribute "articuloses" of "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:46:07 [warning] [application] Failed to set unsafe attribute "categoriases" of "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:46:26 [warning] [application] Failed to set unsafe attribute "articuloses" of "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 17:46:26 [warning] [application] Failed to set unsafe attribute "categoriases" of "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/10/25 18:16:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "UsersApps/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('UsersApps/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/UsersApps/index
+HTTP_REFERER=http://localhost/ejercicios/index.php/apps/1
+---
+2013/10/25 18:16:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "UsersApps".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('UsersApps')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/UsersApps/
+---
+2013/11/08 05:52:40 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbNavbar"."type" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('type', 'inverse')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\views\layouts\main.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#6 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#7 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#8 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\ejercicios\protected\views\layouts\column2.php(32): CBaseController->endContent()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#13 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#15 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(9): CController->render('view', Array)
+#16 [internal function]: AppsController->actionView('1')
+#17 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AppsController), Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AppsController), Object(ReflectionMethod), Array)
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/view')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ejercicios/index.php/apps/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/index
+---
+2013/11/08 06:13:22 [error] [php] include(TbButtonColumn.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\yii\framework\YiiBase.php(196): import()
+#1 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(363): createComponent()
+#2 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbGridView.php(81): TbGridView->initColumns()
+#3 C:\wamp\www\yii\framework\zii\widgets\grid\CGridView.php(334): TbGridView->initColumns()
+#4 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbGridView.php(50): TbGridView->init()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(147): TbGridView->init()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(172): AppsController->createWidget()
+#7 C:\wamp\www\ejercicios\protected\views\apps\admin.php(62): AppsController->widget()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): AppsController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): AppsController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): AppsController->renderPartial()
+#12 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(73): AppsController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionAdmin()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\CController.php(286): AppsController->runAction()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): AppsController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): AppsController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/apps/admin
+in C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbGridView.php (81)
+in C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbGridView.php (50)
+in C:\wamp\www\ejercicios\protected\views\apps\admin.php (62)
+2013/11/08 06:21:04 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbGridView"."fixedHeader" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('fixedHeader', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\views\apps\admin.php(64): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(73): CController->render('admin', Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionAdmin()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/admin')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/index.php/apps/admin
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/08 22:57:52 [warning] [application] Error al definir unsafe el atributo "categoriases" de "Apps".
+in C:\wamp\www\ejercicios\protected\controllers\AppsController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/08 22:57:52 [warning] [application] Error al definir unsafe el atributo "stylesheetsApps" de "Apps".
+in C:\wamp\www\ejercicios\protected\controllers\AppsController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/08 22:57:52 [warning] [application] Error al definir unsafe el atributo "usersApps" de "Apps".
+in C:\wamp\www\ejercicios\protected\controllers\AppsController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/09 03:57:44 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbNav"."label" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('label', 'drop')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbNavbar.php(96): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\wamp\www\ejercicios\protected\views\layouts\main.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#8 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#9 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#10 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 C:\wamp\www\ejercicios\protected\views\layouts\column2.php(32): CBaseController->endContent()
+#14 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#15 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#16 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#17 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(61): CController->render('index', Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionIndex()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/index')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ejercicios/index.php/apps/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/09 04:00:48 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbNav"."label" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('label', 'drop')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbNavbar.php(96): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\wamp\www\ejercicios\protected\views\layouts\main.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#8 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#9 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#10 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 C:\wamp\www\ejercicios\protected\views\layouts\column2.php(32): CBaseController->endContent()
+#14 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#15 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#16 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#17 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(61): CController->render('index', Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionIndex()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/index')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ejercicios/index.php/apps/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/09 04:00:49 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbNav"."label" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('label', 'drop')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbNavbar.php(96): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\wamp\www\ejercicios\protected\views\layouts\main.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#8 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#9 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#10 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 C:\wamp\www\ejercicios\protected\views\layouts\column2.php(32): CBaseController->endContent()
+#14 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#15 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#16 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#17 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(61): CController->render('index', Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionIndex()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/index')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ejercicios/index.php/apps/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/09 04:00:49 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbNav"."label" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('label', 'drop')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbNavbar.php(96): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\wamp\www\ejercicios\protected\views\layouts\main.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#8 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#9 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#10 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 C:\wamp\www\ejercicios\protected\views\layouts\column2.php(32): CBaseController->endContent()
+#14 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#15 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#16 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#17 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(61): CController->render('index', Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionIndex()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/index')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ejercicios/index.php/apps/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/09 04:00:50 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbNav"."label" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('label', 'drop')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbNavbar.php(96): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\wamp\www\ejercicios\protected\views\layouts\main.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#8 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#9 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#10 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 C:\wamp\www\ejercicios\protected\views\layouts\column2.php(32): CBaseController->endContent()
+#14 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#15 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#16 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#17 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(61): CController->render('index', Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionIndex()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/index')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ejercicios/index.php/apps/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/09 04:00:51 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbNav"."label" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('label', 'drop')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AppsController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\ejercicios\protected\extensions\bootstrap\widgets\TbNavbar.php(96): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\wamp\www\ejercicios\protected\views\layouts\main.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#8 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#9 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#10 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 C:\wamp\www\ejercicios\protected\views\layouts\column2.php(32): CBaseController->endContent()
+#14 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#15 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#16 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#17 C:\wamp\www\ejercicios\protected\controllers\AppsController.php(61): CController->render('index', Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AppsController->actionIndex()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('apps/index')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ejercicios/index.php/apps/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/09 04:03:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "stylesheets/page"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('stylesheets/pag...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/stylesheets/page?view=about
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/estilos/index
+---
+2013/11/09 04:03:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "stylesheets/page"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('stylesheets/pag...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/stylesheets/page?view=about
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/estilos/index
+---
+2013/11/09 04:03:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "stylesheets/index"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('stylesheets/ind...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/stylesheets/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/stylesheets/page?view=about
+---
+2013/11/09 04:03:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "stylesheets/index"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('stylesheets/ind...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/stylesheets/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/estilos/index
+---
+2013/11/09 04:04:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "stylesheets"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('stylesheets')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/stylesheets
+---
+2013/11/09 23:36:14 [warning] [application] Error al definir unsafe el atributo "lineases" de "Articulos".
+in C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php (18)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/09 23:37:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/creat...')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/create
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/categorias/1
+---
+2013/11/09 23:38:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/creat...')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/create?0%5Bid%5D=1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/categorias/1
+---
+2013/11/09 23:59:19 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/10 00:01:15 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/10 00:03:46 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."text" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('text')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\view.php(32): CActiveRecord->__get('text')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(9): CController->render('view', Array)
+#7 [internal function]: LineasController->actionView('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/view')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/index.php/lineas/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/10 00:06:49 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/10 00:09:14 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/10 00:24:50 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 01:39:23 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 01:47:24 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 01:55:54 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (36)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 01:57:43 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (36)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 01:59:18 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (36)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:00:00 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:00:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/create')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/lineas/create
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/2
+---
+2013/11/11 02:00:57 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:02:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\ejercicios\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(8): GxController->loadModel('3', 'Lineas')
+#1 [internal function]: LineasController->actionView('3')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/view')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ejercicios/index.php/lineas/3
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/create/1
+---
+2013/11/11 02:02:35 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:13:56 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:18:04 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:19:29 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:20:43 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "articulo/view"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulo/view')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/articulo/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/11 02:20:54 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:24:29 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:29:29 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:29:29 [error] [exception.CException] exception 'CException' with message 'message' in C:\wamp\www\ejercicios\protected\extensions\yiiwheels\widgets\box\WhBox.php:162
+Stack trace:
+#0 C:\wamp\www\ejercicios\protected\extensions\yiiwheels\widgets\box\WhBox.php(132): WhBox->renderButtons()
+#1 C:\wamp\www\ejercicios\protected\extensions\yiiwheels\widgets\box\WhBox.php(100): WhBox->renderHeader()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(147): WhBox->init()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('yiiwheels.widge...', Array)
+#4 C:\wamp\www\ejercicios\protected\views\articulos\view.php(60): CBaseController->widget('yiiwheels.widge...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): CController->render('view', Array)
+#10 [internal function]: ArticulosController->actionView('1')
+#11 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticulosController), Array)
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticulosController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/view')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/11 02:41:05 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:41:05 [error] [exception.CException] exception 'CException' with message 'Propiedad "Articulos"."categorias" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('categorias')
+#1 C:\wamp\www\ejercicios\protected\views\articulos\view.php(4): CActiveRecord->__get('categorias')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): CController->render('view', Array)
+#7 [internal function]: ArticulosController->actionView('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticulosController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticulosController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/view')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/11 02:41:43 [error] [exception.CException] exception 'CException' with message 'Propiedad "Articulos"."categorias" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('categorias')
+#1 C:\wamp\www\ejercicios\protected\views\articulos\view.php(4): CActiveRecord->__get('categorias')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): CController->render('view', Array)
+#7 [internal function]: ArticulosController->actionView('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticulosController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticulosController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/view')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/11 02:41:44 [error] [exception.CException] exception 'CException' with message 'Propiedad "Articulos"."categorias" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('categorias')
+#1 C:\wamp\www\ejercicios\protected\views\articulos\view.php(4): CActiveRecord->__get('categorias')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): CController->render('view', Array)
+#7 [internal function]: ArticulosController->actionView('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticulosController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticulosController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/view')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/11 02:41:45 [error] [exception.CException] exception 'CException' with message 'Propiedad "Articulos"."categorias" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('categorias')
+#1 C:\wamp\www\ejercicios\protected\views\articulos\view.php(4): CActiveRecord->__get('categorias')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): CController->render('view', Array)
+#7 [internal function]: ArticulosController->actionView('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticulosController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticulosController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/view')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/11 02:41:49 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 02:41:49 [error] [exception.CException] exception 'CException' with message 'Propiedad "Articulos"."categorias" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('categorias')
+#1 C:\wamp\www\ejercicios\protected\views\articulos\view.php(4): CActiveRecord->__get('categorias')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): CController->render('view', Array)
+#7 [internal function]: ArticulosController->actionView('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticulosController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticulosController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/view')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/index.php/articulos/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/lineas/update/1
+---
+2013/11/11 02:57:53 [error] [php] Undefined variable: model (C:\wamp\www\ejercicios\protected\models\Categorias.php:32)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(95): CategoriasController->renderInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(869): CategoriasController->renderFile()
+#3 C:\wamp\www\yii\framework\web\CController.php(782): CategoriasController->renderPartial()
+#4 C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php(9): CategoriasController->render()
+#5 unknown(0): CategoriasController->actionView()
+#6 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CategoriasController->runAction()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CategoriasController->runActionWithFilters()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CategoriasController->run()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/categorias/2
+in C:\wamp\www\ejercicios\protected\models\Categorias.php (32)
+in C:\wamp\www\ejercicios\protected\models\Categorias.php (29)
+in C:\wamp\www\ejercicios\protected\views\categorias\view.php (2)
+2013/11/11 03:01:05 [error] [php] Undefined variable: motel (C:\wamp\www\ejercicios\protected\views\categorias\view.php:2)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): CategoriasController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): CategoriasController->renderPartial()
+#2 C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php(9): CategoriasController->render()
+#3 unknown(0): CategoriasController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CategoriasController->runAction()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CategoriasController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CategoriasController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/categorias/2
+in C:\wamp\www\ejercicios\protected\views\categorias\view.php (2)
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (9)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:05:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('categorias/crea...')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/categorias/create
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/11 03:06:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('categorias/crea...')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/categorias/create/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/11 03:06:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('categorias/crea...')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/categorias/create/1
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/11 03:10:41 [warning] [application] Error al definir unsafe el atributo "articuloses" de "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (22)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:10:41 [warning] [application] Error al definir unsafe el atributo "categoriases" de "Categorias".
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (22)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:20:26 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (35)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:36:59 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(396): tag()
+#2 C:\wamp\www\ejercicios\protected\views\articulos\view.php(57): link()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): ArticulosController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): ArticulosController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): ArticulosController->renderPartial()
+#7 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): ArticulosController->render()
+#8 unknown(0): ArticulosController->actionView()
+#9 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\CController.php(286): ArticulosController->runAction()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): ArticulosController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArticulosController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/articulos/1
+in C:\wamp\www\ejercicios\protected\views\articulos\view.php (57)
+in C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php (10)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:41:37 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(396): tag()
+#2 C:\wamp\www\ejercicios\protected\views\articulos\view.php(57): link()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): ArticulosController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): ArticulosController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): ArticulosController->renderPartial()
+#7 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): ArticulosController->render()
+#8 unknown(0): ArticulosController->actionView()
+#9 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\CController.php(286): ArticulosController->runAction()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): ArticulosController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArticulosController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/articulos/1
+in C:\wamp\www\ejercicios\protected\views\articulos\view.php (57)
+in C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php (10)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:41:38 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(396): tag()
+#2 C:\wamp\www\ejercicios\protected\views\articulos\view.php(57): link()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): ArticulosController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): ArticulosController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): ArticulosController->renderPartial()
+#7 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): ArticulosController->render()
+#8 unknown(0): ArticulosController->actionView()
+#9 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\CController.php(286): ArticulosController->runAction()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): ArticulosController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArticulosController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/articulos/1
+in C:\wamp\www\ejercicios\protected\views\articulos\view.php (57)
+in C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php (10)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:41:38 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(396): tag()
+#2 C:\wamp\www\ejercicios\protected\views\articulos\view.php(57): link()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): ArticulosController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): ArticulosController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): ArticulosController->renderPartial()
+#7 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): ArticulosController->render()
+#8 unknown(0): ArticulosController->actionView()
+#9 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\CController.php(286): ArticulosController->runAction()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): ArticulosController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArticulosController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/articulos/1
+in C:\wamp\www\ejercicios\protected\views\articulos\view.php (57)
+in C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php (10)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:51:37 [error] [php] include(Gxtml.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\ejercicios\protected\views\articulos\view.php(57): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): ArticulosController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): ArticulosController->renderFile()
+#4 C:\wamp\www\yii\framework\web\CController.php(782): ArticulosController->renderPartial()
+#5 C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php(10): ArticulosController->render()
+#6 unknown(0): ArticulosController->actionView()
+#7 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\yii\framework\web\CController.php(286): ArticulosController->runAction()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ArticulosController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ArticulosController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/articulos/1
+in C:\wamp\www\ejercicios\protected\views\articulos\view.php (57)
+in C:\wamp\www\ejercicios\protected\controllers\ArticulosController.php (10)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 03:53:47 [warning] [application] Error al definir unsafe el atributo "estilosLineases" de "Lineas".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (17)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/11 16:39:46 [error] [php] array_merge(): Argument #1 is not an array (C:\wamp\www\ejercicios\protected\models\Categorias.php:29)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(95): CategoriasController->renderInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(869): CategoriasController->renderFile()
+#3 C:\wamp\www\yii\framework\web\CController.php(782): CategoriasController->renderPartial()
+#4 C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php(9): CategoriasController->render()
+#5 unknown(0): CategoriasController->actionView()
+#6 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CategoriasController->runAction()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CategoriasController->runActionWithFilters()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CategoriasController->run()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/categorias/2
+in C:\wamp\www\ejercicios\protected\models\Categorias.php (29)
+in C:\wamp\www\ejercicios\protected\views\categorias\view.php (2)
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (9)
+2013/11/11 16:40:12 [error] [php] array_merge(): Argument #1 is not an array (C:\wamp\www\ejercicios\protected\models\Categorias.php:29)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(95): CategoriasController->renderInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(869): CategoriasController->renderFile()
+#3 C:\wamp\www\yii\framework\web\CController.php(782): CategoriasController->renderPartial()
+#4 C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php(9): CategoriasController->render()
+#5 unknown(0): CategoriasController->actionView()
+#6 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CategoriasController->runAction()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CategoriasController->runActionWithFilters()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CategoriasController->run()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/categorias/3
+in C:\wamp\www\ejercicios\protected\models\Categorias.php (29)
+in C:\wamp\www\ejercicios\protected\views\categorias\view.php (2)
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (9)
+2013/11/11 16:42:39 [error] [php] array_merge(): Argument #1 is not an array (C:\wamp\www\ejercicios\protected\models\Categorias.php:29)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(95): CategoriasController->renderInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(869): CategoriasController->renderFile()
+#3 C:\wamp\www\yii\framework\web\CController.php(782): CategoriasController->renderPartial()
+#4 C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php(9): CategoriasController->render()
+#5 unknown(0): CategoriasController->actionView()
+#6 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CategoriasController->runAction()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CategoriasController->runActionWithFilters()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CategoriasController->run()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/index.php/categorias/2
+in C:\wamp\www\ejercicios\protected\models\Categorias.php (29)
+in C:\wamp\www\ejercicios\protected\views\categorias\view.php (2)
+in C:\wamp\www\ejercicios\protected\controllers\CategoriasController.php (9)
+2013/11/11 16:44:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "rights/index"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('rights/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/rights/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/11 16:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "appsuser"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('appsuser')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/appsuser
+---
+2013/11/11 16:45:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "userapps"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('userapps')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/userapps
+---
+2013/11/12 15:48:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('categorias/view')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/categorias/view?app=3
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/categorias/4
+---
+2013/11/12 15:48:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('categorias/view')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/categorias/view?app=3
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/categorias/4
+---
+2013/11/12 15:48:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('categorias/view')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ejercicios/index.php/categorias/view?app=2
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/categorias/4
+---
+2013/11/12 15:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "rights/index"' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('rights/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ejercicios/index.php/rights/index
+HTTP_REFERER=http://localhost:8080/ejercicios/index.php/apps/1
+---
+2013/11/20 22:40:16 [error] [php] include(Adjuntos.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\ejercicios\protected\views\lineas\_form.php(46): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): LineasController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): LineasController->renderFile()
+#4 C:\wamp\www\ejercicios\protected\views\lineas\update.php(17): LineasController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): LineasController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): LineasController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): LineasController->renderPartial()
+#9 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(48): LineasController->render()
+#10 unknown(0): LineasController->actionUpdate()
+#11 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\CController.php(286): LineasController->runAction()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): LineasController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): LineasController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/lineas/update/1
+in C:\wamp\www\ejercicios\protected\views\lineas\_form.php (46)
+in C:\wamp\www\ejercicios\protected\views\lineas\update.php (17)
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (48)
+2013/11/20 23:20:02 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:01 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:02 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:03 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:03 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:03 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:03 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:04 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:04 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:04 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:31 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:32 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:33 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:33 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:34 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:35 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:36 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:21:36 [error] [exception.CException] exception 'CException' with message 'Propiedad "Lineas"."articulos" no se encuentra definida.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('articulos')
+#1 C:\wamp\www\ejercicios\protected\views\lineas\update.php(4): CActiveRecord->__get('articulos')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\eje...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\eje...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\eje...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(88): CController->render('update', Array)
+#7 [internal function]: LineasController->actionUpdate('1')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LineasController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LineasController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ejercicios/lineas/update/1
+HTTP_REFERER=http://localhost:8080/ejercicios/articulos/1
+---
+2013/11/20 23:27:55 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:27:55 [error] [php] include(CuploadedFile.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(84): spl_autoload_call()
+#1 unknown(0): LineasController->actionUpdate()
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): LineasController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): LineasController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): LineasController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/lineas/update/1
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (84)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:28:08 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:28:08 [error] [php] include(CuploadedFile.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\ejercicios\protected\controllers\LineasController.php(84): spl_autoload_call()
+#1 unknown(0): LineasController->actionUpdate()
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): LineasController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): LineasController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): LineasController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\ejercicios\index.php(13): CWebApplication->run()
+REQUEST_URI=/ejercicios/lineas/update/1
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (84)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:28:34 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:28:43 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:31:32 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (86)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:31:41 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (86)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:34:08 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (87)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:34:59 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (88)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:37:45 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:38:43 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:39:41 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:40:06 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:40:33 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:40:57 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:41:30 [warning] [application] Error al definir unsafe el atributo "nombre" de "Adjuntos".
+in C:\wamp\www\ejercicios\protected\controllers\LineasController.php (83)
+in C:\wamp\www\ejercicios\index.php (13)
+2013/11/20 23:42:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "articulos" solicitada.' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('articulos')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('articulos')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('lineas/articulo...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ejercicios/lineas/articulos/1
+HTTP_REFERER=http://localhost:8080/ejercicios/lineas/update/1
+---
+2013/11/20 23:43:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "C:" solicitada.' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('C:')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('C:')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('articulos/C:/wa...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\ejercicios\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ejercicios/articulos/C:/wamp/www/ejercicios/files/Apps/1/1/.jpg
+---
