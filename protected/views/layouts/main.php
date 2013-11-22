@@ -26,18 +26,25 @@
 		            'class' => 'bootstrap.widgets.TbNav',
            			'items'=>array(
 						array('label'=>'Home', 'url'=>array('/site/index')),
-						array('label'=>'Apps', 'url'=>array('/apps/index')),
+						array('label'=>'Apps', 'url'=>array('/apps/index'), 'visible'=>!Yii::app()->user->isGuest),
 						array(
 							'label'=>'Administación de Estilos',
 				            'class'=>'bootstrap.widgets.TbDropdown',
 				            'items'=>array(
 				                array('label'=>'Estilos', 'url'=>array('/estilos/index')),
 				                array('label'=>'Stylesheets', 'url'=>array('/stylesheets/index')),
-				            ),
+				            ), 'visible'=>!Yii::app()->user->isGuest
 				        ),
-				        array('label'=>'Rights', 'url'=>array('/rights/index')),
-						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				        array(
+							'label'=>'Administación',
+				            'class'=>'bootstrap.widgets.TbDropdown',
+				            'items'=>array(
+				                array('label'=>'Rights', 'url'=>array('/rights'), ),
+				                array('label'=>'Administración Usuarios', 'url'=>array('/user/admin'), ),
+				            ), 'visible'=>Yii::app()->user->checkAccess('Administrator'),
+				        ),
+						array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
+						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 		        ),
 		    ),

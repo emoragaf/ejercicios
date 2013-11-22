@@ -36,10 +36,11 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'id'=>'user-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'type' => 'striped bordered',
 	'columns'=>array(
 		array(
 			'name' => 'id',
@@ -68,8 +69,8 @@ $('.search-form form').submit(function(){
 			'value'=>'User::itemAlias("UserStatus",$data->status)',
 			'filter' => User::itemAlias("UserStatus"),
 		),
-		array(
-			'class'=>'CButtonColumn',
-		),
+		 array(
+          'class'=>'bootstrap.widgets.TbButtonColumn',
+        ),
 	),
 )); ?>

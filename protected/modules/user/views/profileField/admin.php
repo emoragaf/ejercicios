@@ -34,9 +34,10 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'type' => 'striped bordered',
 	'columns'=>array(
 		'id',
 		array(
@@ -72,8 +73,8 @@ $('.search-form form').submit(function(){
 			'filter'=>ProfileField::itemAlias("visible"),
 		),
 		//*/
-		array(
-			'class'=>'CButtonColumn',
-		),
+		 array(
+          'class'=>'bootstrap.widgets.TbButtonColumn',
+        ),
 	),
 )); ?>

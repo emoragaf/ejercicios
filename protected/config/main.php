@@ -47,13 +47,13 @@ return array(
                 'hash' => 'md5',
  
                 # send activation email
-                'sendActivationMail' => true,
+                'sendActivationMail' => false,
  
                 # allow access for non-activated users
                 'loginNotActiv' => false,
  
                 # activate user on registration (only sendActivationMail = false)
-                'activeAfterRegister' => false,
+                'activeAfterRegister' => true,
  
                 # automatically login from registration
                 'autoLogin' => true,
@@ -111,7 +111,7 @@ return array(
 		'authManager'=>array(
                 'class'=>'RDbAuthManager',
                 'connectionID'=>'db',
-                'defaultRoles'=>array('Authenticated', 'Guest'),
+                'defaultRoles'=>array('Guest'),
         ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
