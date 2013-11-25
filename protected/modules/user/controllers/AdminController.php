@@ -64,8 +64,15 @@ class AdminController extends Controller
 	public function actionView()
 	{
 		$model = $this->loadModel();
+		$dataProvider = new CActiveDataProvider('UsersApps',array(
+			'criteria'=>array(
+				'condition'=>'users_id='.$model->id,
+				)
+			)
+		);
 		$this->render('view',array(
 			'model'=>$model,
+			'dataProvider'=>$dataProvider,
 		));
 	}
 

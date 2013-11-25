@@ -20,15 +20,16 @@
 	   	'class'=>'generator-link',
 	)); ?></p>
 
-	<?php $this->widget('zii.widgets.grid.CGridView', array(
+	<?php $this->widget('bootstrap.widgets.TbGridView', array(
 		'dataProvider'=>$dataProvider,
+		'type'=>'striped bordered',
 		'template'=>'{items}',
 		'emptyText'=>Rights::t('core', 'No authorization items found.'),
 		'htmlOptions'=>array('class'=>'grid-view permission-table'),
 		'columns'=>$columns,
 	)); ?>
 
-	<p class="info">*) <?php echo Rights::t('core', 'Hover to see from where the permission is inherited.'); ?></p>
+	<p class="info">(*) <?php echo Rights::t('core', 'Hover to see from where the permission is inherited.'); ?></p>
 
 	<script type="text/javascript">
 

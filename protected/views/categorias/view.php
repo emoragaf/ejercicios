@@ -22,29 +22,29 @@ array(
 			'value' => $model->app !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->app)), array('apps/view', 'id' => GxActiveRecord::extractPkValue($model->app, true))) : null,
 			),
 array(
-			'name' => 'padre0',
+			'name' => 'father',
 			'type' => 'raw',
-			'value' => $model->padre0 !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->padre0)), array('categorias/view', 'id' => GxActiveRecord::extractPkValue($model->padre0, true))) : null,
+			'value' => $model->father !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->father)), array('categorias/view', 'id' => GxActiveRecord::extractPkValue($model->father, true))) : null,
 			),
 'nombre',
 'descripcion',
 	),
 )); ?>
 
-<h2><?php echo GxHtml::encode($model->getRelationLabel('articuloses')).' '.GxHtml::link('Nuevo Articulo', array('articulos/create','id'=>$model->id), array('class'=>'btn','color' => TbHtml::BUTTON_COLOR_DEFAULT)); ?></h2>
+<h2><?php echo GxHtml::encode($model->getRelationLabel('articulos')).' '.GxHtml::link('Nuevo Artículo', array('articulos/create','id'=>$model->id), array('class'=>'btn','color' => TbHtml::BUTTON_COLOR_DEFAULT)); ?></h2>
 <?php
 	echo GxHtml::openTag('ul');
-	foreach($model->articuloses as $relatedModel) {
+	foreach($model->articulos as $relatedModel) {
 		echo GxHtml::openTag('li');
 		echo GxHtml::link(GxHtml::encode(GxHtml::valueEx($relatedModel)), array('articulos/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
 		echo GxHtml::closeTag('li');
 	}
 	echo GxHtml::closeTag('ul');
 ?>
-<h3><?php echo (!empty($model->categoriases) ? GxHtml::encode($model->getRelationLabel('categoriases')):''); ?></h3>
+<h3><?php echo (!empty($model->categorias) ? GxHtml::encode($model->getRelationLabel('categoriases')):''); ?></h3>
 <?php
 	echo GxHtml::openTag('ul');
-	foreach($model->categoriases as $relatedModel) {
+	foreach($model->categorias as $relatedModel) {
 		echo GxHtml::openTag('li');
 		echo GxHtml::link(GxHtml::encode(GxHtml::valueEx($relatedModel)), array('categorias/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
 		echo GxHtml::closeTag('li');

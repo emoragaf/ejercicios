@@ -56,7 +56,7 @@ abstract class BaseApps extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'categoriases' => array(self::HAS_MANY, 'Categorias', 'app_id'),
+			'categorias' => array(self::HAS_MANY, 'Categorias', 'app_id'),
 			'stylesheetsApps' => array(self::HAS_MANY, 'StylesheetsApps', 'apps_id'),
 			'usersApps' => array(self::HAS_MANY, 'UsersApps', 'apps_id'),
 		);

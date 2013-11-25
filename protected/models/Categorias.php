@@ -15,7 +15,7 @@ class Categorias extends BaseCategorias
 			'nombre' => Yii::t('app', 'Nombre'),
 			'descripcion' => Yii::t('app', 'Descripcion'),
 			'articuloses' => 'Articulos',
-			'padre0' => 'Padre',
+			'father' => 'Padre',
 			'categoriases' => 'Subcategorias',
 			'app' => null,
 		);
@@ -24,18 +24,18 @@ class Categorias extends BaseCategorias
 			return Yii::t('app', 'Categoria|Categorias', $n);
 		}
 	public function padresBreadcrumb(){
-		if(!empty($this->padre0))
+		if(!empty($this->father))
 		{
-			return array_merge($this->padre0->padresBreadcrumb(),array(GxHtml::valueEx($this->padre0) => array('categorias/view', 'id' => GxActiveRecord::extractPkValue($this->padre0, true))));
+			return array_merge($this->father->padresBreadcrumb(),array(GxHtml::valueEx($this->father) => array('categorias/view', 'id' => GxActiveRecord::extractPkValue($this->father, true))));
 		}
 		else
 			return array(GxHtml::valueEx($this->app) => array('apps/view', 'id' => GxActiveRecord::extractPkValue($this->app, true)));
 	}
 	public function padresLabel()
 	{
-		if(!empty($this->padre0))
+		if(!empty($this->father))
 		{
-			return $this->padre0->padresLabel().'/ '.GxHtml::valueEx($this->padre0);
+			return $this->father->padresLabel().'/ '.GxHtml::valueEx($this->father);
 		}
 		else
 			return '';

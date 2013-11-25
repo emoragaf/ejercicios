@@ -20,7 +20,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'padre'); ?>
-		<?php echo $form->dropDownList($model, 'padre', GxHtml::listDataEx(Categorias::model()->findAllAttributes(null, true))); ?>
+		<?php echo $form->dropDownList($model,'padre',GxHtml::listData(Categorias::model()->findAll(),'id', 'nombre','padre0.nombre'),array('prompt'=>'--Ninguno--')); ?>
 		<?php echo $form->error($model,'padre'); ?>
 		</div><!-- row -->
 		<div class="row">

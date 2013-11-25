@@ -51,9 +51,9 @@ abstract class BaseCategorias extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'articuloses' => array(self::HAS_MANY, 'Articulos', 'categoria_id'),
-			'padre0' => array(self::BELONGS_TO, 'Categorias', 'padre'),
-			'categoriases' => array(self::HAS_MANY, 'Categorias', 'padre'),
+			'articulos' => array(self::HAS_MANY, 'Articulos', 'categoria_id'),
+			'father' => array(self::BELONGS_TO, 'Categorias', 'padre'),
+			'categorias' => array(self::HAS_MANY, 'Categorias', 'padre'),
 			'app' => array(self::BELONGS_TO, 'Apps', 'app_id'),
 		);
 	}
@@ -71,7 +71,7 @@ abstract class BaseCategorias extends GxActiveRecord {
 			'nombre' => Yii::t('app', 'Nombre'),
 			'descripcion' => Yii::t('app', 'Descripcion'),
 			'articuloses' => null,
-			'padre0' => null,
+			'father' => 'Padre',
 			'categoriases' => null,
 			'app' => null,
 		);

@@ -37,12 +37,12 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'id' => 'users-apps-grid',
+	'type'=>'striped bordered',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
 	'columns' => array(
-		'id',
 		array(
 				'name'=>'apps_id',
 				'value'=>'GxHtml::valueEx($data->apps)',

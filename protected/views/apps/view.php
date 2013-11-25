@@ -31,10 +31,10 @@ $this->menu=array(
 		),
 )); ?>
 
-<h2><?php echo GxHtml::encode($model->getRelationLabel('categoriases')).' '.GxHtml::link('Nueva Categoria', array('categorias/create','app'=>$model->id), array('class'=>'btn','color' => TbHtml::BUTTON_COLOR_DEFAULT)); ?></h2>
+<h2><?php echo GxHtml::encode($model->getRelationLabel('categorias')).' '.GxHtml::link('Nueva Categoria', array('categorias/create','app'=>$model->id), array('class'=>'btn','color' => TbHtml::BUTTON_COLOR_DEFAULT)); ?></h2>
 <?php
 	echo GxHtml::openTag('ul');
-	foreach($model->categoriases as $relatedModel) {
+	foreach($model->categorias as $relatedModel) {
 		echo GxHtml::openTag('li');
 		echo GxHtml::link(GxHtml::encode($relatedModel->padresLabel().'/ '.GxHtml::valueEx($relatedModel)), array('categorias/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
 		echo GxHtml::closeTag('li');

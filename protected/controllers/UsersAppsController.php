@@ -9,9 +9,9 @@ class UsersAppsController extends GxController {
 		));
 	}
 
-	public function actionCreate() {
+	public function actionCreate($id) {
 		$model = new UsersApps;
-
+		$model->users_id = $id;
 
 		if (isset($_POST['UsersApps'])) {
 			$model->setAttributes($_POST['UsersApps']);
@@ -20,11 +20,11 @@ class UsersAppsController extends GxController {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
 					Yii::app()->end();
 				else
-					$this->redirect(array('view', 'id' => $model->id));
+					$this->redirect(array('index', 'id' => $model->users_id));
 			}
 		}
 
-		$this->render('create', array( 'model' => $model));
+		$this->render('create', array( 'model' => $model,'userId'=>$id));
 	}
 
 	public function actionUpdate($id) {
@@ -54,10 +54,13 @@ class UsersAppsController extends GxController {
 			throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));
 	}
 
-	public function actionIndex() {
+	public function actionIndex($id) {
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('users_id ='.$id);
 		$dataProvider = new CActiveDataProvider('UsersApps');
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
+			'userId'=>$id,
 		));
 	}
 

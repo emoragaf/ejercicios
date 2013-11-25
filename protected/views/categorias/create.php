@@ -1,8 +1,8 @@
 <?php
 
 $this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	Yii::t('app', 'Create'),
+	GxHtml::valueEx($model->app) => array('/apps/view','id'=>$model->app_id),
+	Yii::t('app', 'Create').' '.$model->label(1),
 );
 
 $this->menu = array(

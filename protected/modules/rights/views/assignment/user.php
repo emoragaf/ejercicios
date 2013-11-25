@@ -12,8 +12,9 @@
 	
 	<div class="assignments span-12 first">
 
-		<?php $this->widget('zii.widgets.grid.CGridView', array(
+		<?php $this->widget('bootstrap.widgets.TbGridView', array(
 			'dataProvider'=>$dataProvider,
+			'type'=>'striped bordered',
 			'template'=>'{items}',
 			'hideHeader'=>true,
 			'emptyText'=>Rights::t('core', 'This user has not been assigned any items.'),

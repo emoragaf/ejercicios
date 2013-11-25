@@ -16,8 +16,9 @@
 	   	'class'=>'add-role-link',
 	)); ?></p>
 
-	<?php $this->widget('zii.widgets.grid.CGridView', array(
+	<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	    'dataProvider'=>$dataProvider,
+        'type'=>'striped bordered',
 	    'template'=>'{items}',
 	    'emptyText'=>Rights::t('core', 'No roles found.'),
 	    'htmlOptions'=>array('class'=>'grid-view role-table'),

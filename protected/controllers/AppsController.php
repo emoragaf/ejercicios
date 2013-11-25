@@ -80,7 +80,17 @@ class AppsController extends GxController {
 	}
 
 	public function actionIndex() {
-		$dataProvider = new CActiveDataProvider('Apps');
+		$dataProvider = new CActiveDataProvider('Apps',array(
+			'criteria'=>array(
+				'with'=> array(
+					'usersApps'=>array(
+						'condition'=>'usersApps.users_id=:id',
+						'params'=>array(':id'=>Yii::app()->user->id),
+					),
+				),
+			 	'together'=>true,
+			),
+		));
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));

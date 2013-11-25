@@ -27,7 +27,7 @@ abstract class BaseUsersApps extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'User App|Users Apps', $n);
+		return Yii::t('app', 'Aplicación Usuario|Aplicaciones Usuario', $n);
 	}
 
 	public static function representingColumn() {

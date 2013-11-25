@@ -25,7 +25,7 @@ class CategoriasController extends GxController {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
 					Yii::app()->end();
 				else
-					$this->redirect(array('view', 'id' => $model->id));
+					$this->redirect(array('/apps/view', 'id' => $model->app_id));
 			}
 		}
 
@@ -51,10 +51,12 @@ class CategoriasController extends GxController {
 
 	public function actionDelete($id) {
 		if (Yii::app()->getRequest()->getIsPostRequest()) {
-			$this->loadModel($id, 'Categorias')->delete();
+			$cat =$this->loadModel($id, 'Categorias');
+			$appId = $cat->app_id;
+			$cat->delete();
 
 			if (!Yii::app()->getRequest()->getIsAjaxRequest())
-				$this->redirect(array('admin'));
+				$this->redirect(array('/apps/view','id'=>$appId));
 		} else
 			throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));
 	}
